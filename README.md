@@ -1,10 +1,9 @@
 # nodejs-production-demo
 
-#Reverse Proxy setup \n
-<code>server {
+#Reverse Proxy setup: 
+<p><code>server {
     listen 80;
     server_name codingx.in;
-
     location / {
         proxy_pass http://localhost:3000;
         proxy_set_header Host $host;
@@ -12,7 +11,8 @@
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_set_header X-Forwarded-Proto $scheme;
     }
-}</code>
+}
+</code></p>
 
 #Download Node: \n
-<code> curl -sL https://deb.nodesource.com/setup_12.x -o nodesource_setup.sh </code>
+<p><code> curl -sL https://deb.nodesource.com/setup_12.x -o nodesource_setup.sh </code></p>
